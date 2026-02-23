@@ -479,6 +479,15 @@
             color: #94a3b8;
         }
         
+        .copyright a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+        
         /* Page Content */
         .page-content {
             display: none;
@@ -488,223 +497,91 @@
             display: block;
         }
         
-        /* Privacy Policy Page */
-        .policy-content {
+        /* Policy Pages */
+        .policy-page {
             padding: 60px 0;
             background-color: var(--light);
+            min-height: calc(100vh - 300px);
         }
         
-        .policy-container {
+        .policy-page .container {
             background-color: white;
             padding: 40px;
             border: 1px solid var(--border);
             border-radius: 4px;
-            max-height: 80vh;
-            overflow-y: auto;
         }
         
-        .policy-container h1 {
+        .policy-page h1 {
             color: var(--royal-blue);
             margin-bottom: 30px;
             text-align: center;
+            font-size: 36px;
         }
         
-        .policy-container h2 {
+        .policy-page h2 {
             color: var(--dark);
-            margin: 25px 0 15px;
+            margin: 30px 0 15px;
             padding-bottom: 10px;
             border-bottom: 1px solid var(--border);
+            font-size: 28px;
         }
         
-        .policy-container h3 {
+        .policy-page h3 {
             color: var(--dark);
             margin: 20px 0 10px;
+            font-size: 20px;
         }
         
-        .policy-container p {
+        .policy-page p {
             margin-bottom: 15px;
             line-height: 1.8;
         }
         
-        .policy-container ul {
+        .policy-page ul, .policy-page ol {
             margin: 15px 0 15px 30px;
         }
         
-        .policy-container li {
+        .policy-page li {
             margin-bottom: 10px;
             line-height: 1.6;
         }
         
-        /* Modal Overlay */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal-overlay.active {
-            display: flex;
-        }
-        
-        .modal-content {
-            background-color: white;
-            width: 90%;
-            max-width: 900px;
-            max-height: 90vh;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .modal-header {
-            background: linear-gradient(to right, var(--royal-blue), var(--navy-blue));
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .modal-header h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-        
-        .close-modal {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 28px;
-            cursor: pointer;
-            line-height: 1;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .close-modal:hover {
-            color: #ff6b6b;
-        }
-        
-        .modal-body {
-            padding: 30px;
-            max-height: calc(90vh - 100px);
-            overflow-y: auto;
-        }
-        
-        /* Modal Content Styling */
-        .modal-body h1 {
-            color: var(--royal-blue);
-            margin-bottom: 25px;
-            font-size: 32px;
-            border-bottom: 2px solid var(--royal-blue);
-            padding-bottom: 15px;
-        }
-        
-        .modal-body h2 {
-            color: var(--dark);
-            margin: 25px 0 15px;
-            font-size: 24px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .modal-body h3 {
-            color: var(--dark);
-            margin: 20px 0 10px;
-            font-size: 18px;
-        }
-        
-        .modal-body p {
-            margin-bottom: 15px;
-            line-height: 1.7;
-            color: var(--text);
-        }
-        
-        .modal-body ul, .modal-body ol {
-            margin: 15px 0 15px 30px;
-        }
-        
-        .modal-body li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        
-        .modal-body strong {
+        .policy-page strong {
             color: var(--dark);
         }
         
-        .modal-body a {
+        .policy-page a {
             color: var(--royal-blue);
             text-decoration: underline;
         }
         
-        .modal-body a:hover {
+        .policy-page a:hover {
             color: var(--navy-blue);
         }
         
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .policy-nav {
+            margin-bottom: 20px;
         }
         
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .policy-nav a {
+            color: var(--royal-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: all 0.3s;
         }
         
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .policy-nav a:hover {
+            background-color: var(--royal-blue);
+            color: white;
+            text-decoration: none;
         }
         
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        @keyframes slideIn {
-            from {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .policy-nav i {
+            margin-right: 5px;
         }
         
         /* NEW: Who We Are Section with Circular Progress Indicators */
@@ -899,24 +776,16 @@
                 font-size: 28px;
             }
             
-            .policy-container {
+            .policy-page .container {
                 padding: 20px;
             }
             
-            .modal-content {
-                width: 95%;
+            .policy-page h1 {
+                font-size: 28px;
             }
             
-            .modal-body {
-                padding: 20px;
-            }
-            
-            .modal-body h1 {
-                font-size: 26px;
-            }
-            
-            .modal-body h2 {
-                font-size: 22px;
+            .policy-page h2 {
+                font-size: 24px;
             }
             
             .progress-stats {
@@ -1310,65 +1179,21 @@
         </section>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Quick Cloud Support Service LLC</h3>
-                    <p>Your trusted partner for secure cloud hosting and reliable IT support solutions.</p>
-            
+    <!-- Privacy Policy Page -->
+    <div id="privacy" class="page-content">
+        <div class="policy-page">
+            <div class="container">
+                <div class="policy-nav">
+                    <a href="#" data-page="home"><i class="fas fa-arrow-left"></i> Back to Home</a>
                 </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" data-page="home">Home</a></li>
-                        <li><a href="#" data-page="services">Services</a></li>
-                        <li><a href="#" data-page="contact">Contact</a></li>
-                        <li><a href="#" id="privacyLink">Privacy Policy</a></li>
-                        <li><a href="#" id="refundLink">Refund Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Cloud Hosting</a></li>
-                        <li><a href="#">QuickBooks Support</a></li>
-                        <li><a href="#">IT Infrastructure</a></li>
-                        <li><a href="#">Data Backup & Security</a></li>
-                        <li><a href="#">Technical Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Wyoming, United States</li>
-                        <li><i class="fas fa-phone-alt"></i>+1 (877)757-4919</li>
-                        <li><i class="fas fa-envelope"></i> support@quickcloudsupport.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Quick Cloud Support Service LLC. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Privacy Policy Modal -->
-    <div id="privacyModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Privacy Policy</h2>
-                <button class="close-modal">&times;</button>
-            </div>
-            <div class="modal-body">
+                
                 <h1>Privacy Policy</h1>
                 
                 <p><strong>Quick Cloud Support Service LLC ("we," "our," or "us")</strong> is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by Quick Cloud Support Service LLC.</p>
                 
                 <p>This Privacy Policy applies to our website, and its associated subdomains (collectively, our "Service") alongside our application, Quick Cloud Support Service LLC. By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service.</p>
                 
-                <p>For information about our refund practices, please see our <a href="#" id="refundLinkInPrivacy">Refund Policy</a>.</p>
+                <p>For information about our refund practices, please see our <a href="#" data-page="refund">Refund Policy</a>.</p>
                 
                 <h2>Definitions and key terms</h2>
                 <p>To help explain things as clearly as possible in this Privacy Policy, every time any of these terms are referenced, are strictly defined as:</p>
@@ -1562,14 +1387,14 @@
         </div>
     </div>
 
-    <!-- Refund Policy Modal -->
-    <div id="refundModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Return & Refund Policy</h2>
-                <button class="close-modal refund-close">&times;</button>
-            </div>
-            <div class="modal-body">
+    <!-- Refund Policy Page -->
+    <div id="refund" class="page-content">
+        <div class="policy-page">
+            <div class="container">
+                <div class="policy-nav">
+                    <a href="#" data-page="home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                </div>
+                
                 <h1>Return and Refund Policy</h1>
                 
                 <h2>Definitions and key terms</h2>
@@ -1639,6 +1464,49 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Cloud Support Service LLC</h3>
+                    <p>Your trusted partner for secure cloud hosting and reliable IT support solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="services">Services</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                        <li><a href="#" data-page="privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-page="refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cloud Hosting</a></li>
+                        <li><a href="#">QuickBooks Support</a></li>
+                        <li><a href="#">IT Infrastructure</a></li>
+                        <li><a href="#">Data Backup & Security</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Wyoming, United States</li>
+                        <li><i class="fas fa-phone-alt"></i>+1 (877)757-4919</li>
+                        <li><i class="fas fa-envelope"></i> support@quickcloudsupport.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Quick Cloud Support Service LLC. All Rights Reserved. | <a href="#" data-page="privacy">Privacy Policy</a> | <a href="#" data-page="refund">Refund Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         // Mobile Menu Toggle
         document.querySelector('.mobile-menu').addEventListener('click', function() {
@@ -1646,10 +1514,8 @@
         });
 
         // Page Navigation
-        document.querySelectorAll('.nav-link, .footer-links a[data-page]').forEach(link => {
+        document.querySelectorAll('.nav-link, .footer-links a[data-page], .copyright a[data-page], .policy-nav a[data-page]').forEach(link => {
             link.addEventListener('click', function(e) {
-                if (this.id === 'privacyLink' || this.id === 'refundLink') return;
-                
                 e.preventDefault();
                 
                 // Get the target page
@@ -1666,8 +1532,10 @@
                 // Update active nav link
                 document.querySelectorAll('.nav-link').forEach(navLink => {
                     navLink.classList.remove('active');
+                    if (navLink.getAttribute('data-page') === targetPage) {
+                        navLink.classList.add('active');
+                    }
                 });
-                this.classList.add('active');
                 
                 // Close mobile menu if open
                 document.querySelector('.nav-links').classList.remove('active');
@@ -1805,72 +1673,38 @@
             observer.observe(whoWeAreSection);
         }
 
-        // Modal functionality
-        const privacyModal = document.getElementById('privacyModal');
-        const refundModal = document.getElementById('refundModal');
-        const privacyLink = document.getElementById('privacyLink');
-        const refundLink = document.getElementById('refundLink');
-        const closeModalButtons = document.querySelectorAll('.close-modal, .refund-close');
-
-        // Open Privacy Policy modal
-        privacyLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            privacyModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        // Open Refund Policy modal
-        refundLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            refundModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        // Close modal functions
-        function closeAllModals() {
-            privacyModal.classList.remove('active');
-            refundModal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Close modals when close buttons are clicked
-        closeModalButtons.forEach(button => {
-            button.addEventListener('click', closeAllModals);
-        });
-
-        // Close modals when clicking outside
-        [privacyModal, refundModal].forEach(modal => {
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    closeAllModals();
-                }
-            });
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeAllModals();
+        // Check URL hash for direct navigation
+        function checkHash() {
+            const hash = window.location.hash.substring(1);
+            if (hash && ['home', 'services', 'contact', 'privacy', 'refund'].includes(hash)) {
+                // Hide all pages
+                document.querySelectorAll('.page-content').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show the target page
+                document.getElementById(hash).classList.add('active');
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(navLink => {
+                    navLink.classList.remove('active');
+                    if (navLink.getAttribute('data-page') === hash) {
+                        navLink.classList.add('active');
+                    }
+                });
             }
-        });
-
-        // Prevent navigation links from working in modals
-        document.querySelectorAll('#privacyModal .nav-link, #refundModal .nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        });
-
-        // Add link from Privacy Policy to Refund Policy
-        const refundLinkInPrivacy = document.getElementById('refundLinkInPrivacy');
-        if (refundLinkInPrivacy) {
-            refundLinkInPrivacy.addEventListener('click', function(e) {
-                e.preventDefault();
-                closeAllModals();
-                refundModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
         }
+
+        // Check hash on page load
+        checkHash();
+
+        // Update hash when navigating
+        document.querySelectorAll('[data-page]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetPage = this.getAttribute('data-page');
+                window.location.hash = targetPage;
+            });
+        });
     </script>
 </body>
 </html>
